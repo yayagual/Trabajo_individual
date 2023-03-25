@@ -1,0 +1,81 @@
+{% extends '../index_master.html'%}
+
+{% block content %}
+<div class="right_col" role="main">
+   <h1>Agregar Usuario</h1>
+   
+   <form action="agregar" method="POST">
+    {% csrf_token %}
+    <div class="form-group row">
+      <label for="nombre" class="col-4 col-form-label">Nombre</label> 
+      <div class="col-8">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <i class="fa fa-address-card"></i>
+            </div>
+          </div> 
+          <input id="nombre" name="nombre" type="text" required="required" class="form-control">
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="Apellido" class="col-4 col-form-label">Apellido</label> 
+      <div class="col-8">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <i class="fa fa-address-card-o"></i>
+            </div>
+          </div> 
+          <input id="Apellido" name="apellido" type="text" required="required" class="form-control">
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="Correo" class="col-4 col-form-label">Correo</label> 
+      <div class="col-8">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <i class="fa fa-envelope"></i>
+            </div>
+          </div> 
+          <input id="Correo" name="correo" type="email" required="required" class="form-control">
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="Telefono" class="col-4 col-form-label">Telefono</label> 
+      <div class="col-8">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <i class="fa fa-phone-square"></i>
+            </div>
+          </div> 
+          <input id="Telefono" name="telefono" type="number" required="required" class="form-control">
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="f_nac" class="col-4 col-form-label">Fecha de Nacimiento</label> 
+      <div class="col-8">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <i class="fa fa-calendar-check-o"></i>
+            </div>
+          </div> 
+          <input id="f_nac" name="f_nac" type="date" required="required" class="form-control">
+        </div>
+      </div>
+    </div> 
+    <div class="form-group row">
+      <div class="offset-4 col-8">
+        <button name="submit" type="submit" class="btn btn-primary"><i class="fa fa-user-plus"></i>Agregar Usuario</button>
+      </div>
+    </div>
+  </form>
+</div>
+{% endblock %}
